@@ -22,7 +22,7 @@ object Exercise1Candidate {
         .config("spark.master", "local")
         .getOrCreate()
 
-      val columnsMovies = "MovieID,Title,Genres"
+      val columnsMovies = "MovieID,null1,Title,null2,Genres"
       val fieldsMovies = columnsMovies.split(",").map(fieldName => StructField(fieldName, StringType,
         nullable = true))
       val customSchemaMovies = StructType(fieldsMovies)
